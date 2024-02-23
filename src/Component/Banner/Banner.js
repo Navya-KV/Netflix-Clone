@@ -10,15 +10,35 @@ function Banner() {
       console.log(response.data.results[0]);
       setMovie(response.data.results[0])
     })
-  }, [])    
+  }, [])  
+
+  // const opts = {
+  //   height: '390',
+  //   width: '100%',
+  //   playerVars: {
+  //     // https://developers.google.com/youtube/player_parameters
+  //     autoplay: 1,
+  //   },
+  // };
+  
+  // const handleBtn = (id)=>{
+  //   console.log(id);
+  //   axios.get(`/movie/${id}/videos?api_key=${API_KEY}&language=en-US`).then(response=>{
+  //     if(response.data.results.length!==0){
+  //       setBtn(response.data.results[0])
+  //     }else{
+  //       console.log('Array Empty');
+  //     }
+  //   })
+  // }
 
   return (
     <div 
-    style={{backgroundImage:`url(${movie ? imageUrl+movie.backdrop_path : ""})`}} 
+    style={{backgroundImage:`url(${movie ? imageUrl+movie.backdrop_path : ""})`}}  
     className='banner'>
         <div className='content'> 
             <h1 className='title'>{movie ? movie.title : ""}</h1>
-            <div className='banner-buttons'>
+              <div className='banner-buttons'>
                 <button className='button'>Play</button>
                 <button className='button'>My list</button>
             </div>

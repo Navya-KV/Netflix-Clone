@@ -11,7 +11,7 @@ Horror Movies
 Romance Movies
 /discover/movie?api_key=${API_KEY}&with_genre=10749
 Documentaries
-/discover/movie?api_key=${API_KEY}&with_genre=99"
+/discover/movie?api_key=${API_KEY}&with_genre=99
 
 imageUrl = 'https://image.tmdb.org/t/p/original'
 
